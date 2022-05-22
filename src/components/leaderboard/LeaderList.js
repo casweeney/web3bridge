@@ -11,6 +11,7 @@ const LeaderList = () => {
         <div className="row">
             <div className="col-md-2"></div>
             <div className="col-md-8 leader-board">
+                <h4 className="font-weight-bold">Top leading participants</h4>
                 <div className="card">
                     <div className="card-body">
                         <div className="row">
