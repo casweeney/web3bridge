@@ -30,7 +30,7 @@ const LeaderState = (props) => {
     ]
   };
 
-  const [state, dispatch] = useReducer(leaderReducer, initialState);
+  const [state] = useReducer(leaderReducer, initialState);
 
   // Update Leader Board
   const updateBoard = () => {
