@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Home from "./components/pages/Home";
 import LeaderForm from "./components/leaderboard/LeaderForm";
 import LeaderState from "./context/leaderboard/LeaderState";
