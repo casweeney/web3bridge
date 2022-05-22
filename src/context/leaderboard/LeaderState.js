@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import LeaderContext from "./leaderContext";
 import leaderReducer from "./leaderReducer";
 
-import { ADD_WORKOUT } from "../types";
+//import { ADD_WORKOUT } from "../types";
 
 const LeaderState = (props) => {
   const initialState = {
