@@ -10,22 +10,22 @@ const LeaderState = (props) => {
         {
             leader_id: 1,
             name: "Casweeney Ojukwu",
-            score: 500
+            totalSteps: 500
         },
         {
             leader_id: 2,
             name: "Jane Uzoma",
-            score: 600
+            totalSteps: 600
         },
         {
             leader_id: 3,
             name: "Daniel Irabor",
-            score: 100
+            totalSteps: 100
         },
         {
             leader_id: 4,
             name: "Okikiola Shomuyi",
-            score: 300
+            totalSteps: 300
         }
     ]
   };

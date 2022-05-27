@@ -16,7 +16,7 @@ const LeaderList = () => {
                     <div className="card-body">
                         <div className="row">
                             {leaders.length > 0 && leaders.map((leader) => (
-                                <Leader name={leader.name} key={leader.leader_id} />
+                                <Leader name={leader.name} totalSteps={leader.totalSteps} key={leader.leader_id} />
                             ))}
                         </div>
                     </div>
