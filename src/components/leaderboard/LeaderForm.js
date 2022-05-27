@@ -26,7 +26,7 @@ const LeaderForm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if(workout.iteration === "" || workout.leader_id === "" || workout.name === "" || workout.steps === ""){
+        if(workout.leader_id === "" || workout.name === "" || workout.steps === ""){
             setAlert("All fields are required", "danger");
         } else {
             if(leaders.length < maxUsers) {
