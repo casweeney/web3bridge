@@ -1,9 +1,14 @@
 import React, { useState, useContext } from 'react';
 import LeaderContext from "../../context/leaderboard/leaderContext";
+import AlertContext from "../../context/alert/alertContext";
 
 const LeaderForm = () => {
+    const maxUsers = 20;
     const leaderContext = useContext(LeaderContext);
-    const { addWorkout } = leaderContext;
+    const { addWorkout, leaders } = leaderContext;
+
+    const alertContext = useContext(AlertContext);
+    const { setAlert } = alertContext;
 
     const [workout, setWorkout] = useState({
         iteration: "",
@@ -21,7 +26,12 @@ const LeaderForm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        addWorkout(workout);
+        if(leaders.length < maxUsers) {
+            addWorkout(workout);
+        } else {
+            setAlert("Maximum number of leaders reached", "danger");
+        }
+
         setWorkout({
             iteration: "",
             leader_id: "",

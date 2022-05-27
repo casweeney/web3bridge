@@ -15,9 +15,11 @@ const LeaderList = () => {
                 <div className="card">
                     <div className="card-body">
                         <div className="row">
-                            {leaders.length > 0 && leaders.map((leader) => (
-                                <Leader name={leader.name} totalSteps={leader.totalSteps} key={leader.leader_id} />
-                            ))}
+                            {leaders.length > 0 && 
+                                leaders.sort((a,b) => b.steps-a.steps).slice(0,10).map((leader) => (
+                                    <Leader name={leader.name} steps={leader.steps} key={leader.leader_id} />
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
