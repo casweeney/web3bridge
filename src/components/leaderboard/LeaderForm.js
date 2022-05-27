@@ -75,7 +75,7 @@ const LeaderForm = () => {
                                         <label htmlFor="leader-id">Leader ID</label>
                                         <input 
                                             name="leader_id"
-                                            type="text" 
+                                            type="number" 
                                             className="form-control" 
                                             id="leader_id" 
                                             value={leader_id}
@@ -99,7 +99,7 @@ const LeaderForm = () => {
                                         <label htmlFor="steps">Steps</label>
                                         <input 
                                             name="steps"
-                                            type="text" 
+                                            type="number" 
                                             className="form-control" 
                                             id="steps" 
                                             value={steps}
