@@ -26,19 +26,22 @@ const LeaderForm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if(leaders.length < maxUsers) {
-            addWorkout(workout);
+        if(workout.iteration === "" || workout.leader_id === "" || workout.name === "" || workout.steps === ""){
+            setAlert("All fields are required", "danger");
         } else {
-            setAlert("Maximum number of leaders reached", "danger");
+            if(leaders.length < maxUsers) {
+                addWorkout(workout);
+            } else {
+                setAlert("Maximum number of leaders reached", "danger");
+            }
+    
+            setWorkout({
+                iteration: "",
+                leader_id: "",
+                name: "",
+                steps: ""
+            });
         }
-
-        setWorkout({
-            iteration: "",
-            leader_id: "",
-            name: "",
-            steps: ""
-        });
-
     }
 
   return (
